@@ -8,11 +8,11 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cities', '0011_add_on_demand_is_avalilable'),
+        ('cities', '0010_adjust_unique_attributes'),
     ]
 
     operations = [
-        migrations.AlterField(
+        migrations.AddField(
             model_name='region',
             name='on_demand_is_available',
             field=models.BooleanField(default=False),
