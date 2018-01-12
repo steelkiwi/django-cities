@@ -154,6 +154,12 @@ class Region(Place, SlugModel):
     country = models.ForeignKey(swapper.get_model_name('cities', 'Country'),
                                 related_name='regions')
 
+    # START CUSTOM CODE
+    # =========================================================================
+    on_demand_is_available = models.BooleanField(default=False)
+    # =========================================================================
+    # END CUSTOM CODE
+
     class Meta:
         unique_together = (('country', 'name'),)
 
